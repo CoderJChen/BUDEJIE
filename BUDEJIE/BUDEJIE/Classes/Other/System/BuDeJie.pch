@@ -1,0 +1,72 @@
+//
+//  BuDeJie.pch
+//  百思不得其解
+//
+//  Created by eric on 17/1/4.
+//  Copyright © 2017年 eric. All rights reserved.
+//
+/*
+ pch步骤:1.提前编译Pch
+ 
+ 1.存放公用宏
+ 2.存放公用头文件
+ 3.自定义Log
+ */
+
+#ifndef BuDeJie_pch
+#define BuDeJie_pch
+
+#import "UIImage+Extension.h"
+#import "UIView+Extention.h"
+#import "UIBarButtonItem+Item.h"
+#import "UITextField+Placeholder.h"
+#import "CJConst.h"
+#import "UIImageView+download.h"
+#import "NSString+Emoji.h"
+#import "UITextView+Extension.h"
+
+// #filename -> "filename"
+// @#filename -> @"filename"
+#define CJAFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/eric/Desktop/%@.plist", @#filename] atomically:YES]
+
+#define CJColor(r,g,b) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:1]
+
+//通知中心
+#define CJNotificationCenter [NSNotificationCenter defaultCenter]
+
+#define CJGrayColor(v) CJColor((v),(v),(v))
+
+#define CJCommonBgColor CJGrayColor(215)
+//表情列数
+#define CJEmotionMaxCols 7
+//表情行数
+#define CJEmotionMaxRows 3
+//表情总数
+#define CJEmotionPageNumber ((CJEmotionMaxCols * CJEmotionMaxRows)-1)
+
+// 标签的背景颜色
+#define CJTagBgColor CJColor(70, 142, 243)
+
+#define CJRandomColor CJColor(arc4random_uniform(255.), arc4random_uniform(255.), arc4random_uniform(255.))
+//弱引用
+#define CJWeakSelf __weak typeof(self) weakSelf = self
+
+/***********屏幕适配*************/
+#define CJScreenW [UIScreen mainScreen].bounds.size.width
+#define CJScreenH [UIScreen mainScreen].bounds.size.height
+#define iphone6P (CJScreenH == 736)
+#define iphone6 (CJScreenH == 667)
+#define iphone5 (CJScreenH == 568)
+#define iphone4 (CJScreenH == 480)
+/***********屏幕适配*************/
+
+
+#define CJFUNC CJLog(@"%s",__func__)
+
+#ifdef DEBUG
+
+#define CJLog(...)  NSLog(__VA_ARGS__)
+
+#endif
+
+#endif 

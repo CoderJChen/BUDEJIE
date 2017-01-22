@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bCO-L3-H4B" customClass="CJCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bCO-L3-H4B" id="Kgj-Ap-iz8">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Siq-Sr-ZKn">
+                        <rect key="frame" x="0.0" y="42" width="320" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Vm5-sO-InL"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-pz-Wag">
+                        <rect key="frame" x="0.0" y="0.0" width="5" height="42"/>
+                        <color key="backgroundColor" red="1" green="0.068542411060000002" blue="0.033799276400000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="UW2-E9-nvX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Siq-Sr-ZKn" secondAttribute="bottom" id="7K0-Jy-X8P"/>
+                    <constraint firstAttribute="trailing" secondItem="Siq-Sr-ZKn" secondAttribute="trailing" id="CRo-ea-O9r"/>
+                    <constraint firstItem="Siq-Sr-ZKn" firstAttribute="leading" secondItem="Kgj-Ap-iz8" secondAttribute="leading" id="HaT-Bl-jXX"/>
+                    <constraint firstItem="Siq-Sr-ZKn" firstAttribute="top" secondItem="ILr-pz-Wag" secondAttribute="bottom" id="J2V-on-czq"/>
+                    <constraint firstItem="ILr-pz-Wag" firstAttribute="top" secondItem="Kgj-Ap-iz8" secondAttribute="top" id="iuR-BF-YVF"/>
+                    <constraint firstItem="ILr-pz-Wag" firstAttribute="leading" secondItem="Kgj-Ap-iz8" secondAttribute="leading" id="ybq-p0-wrj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="selectedIndicator" destination="ILr-pz-Wag" id="ake-sJ-yzG"/>
+            </connections>
+        </tableViewCell>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+</document>

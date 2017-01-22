@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CJPostWordToolBarView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpr-xL-qqW">
+                    <rect key="frame" x="0.0" y="76" width="375" height="44"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="compose_toolbar_background" translatesAutoresizingMaskIntoConstraints="NO" id="b2c-ka-PZi">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        </imageView>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tw-oL-lfk" userLabel="camera">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="44"/>
+                            <state key="normal" image="compose_camerabutton_background"/>
+                            <state key="highlighted" image="compose_camerabutton_background_highlighted"/>
+                            <connections>
+                                <action selector="toolBarClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Az7-vf-s8H"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-fV-UXc" userLabel="picture">
+                            <rect key="frame" x="75" y="0.0" width="75" height="44"/>
+                            <state key="normal" image="compose_toolbar_picture"/>
+                            <state key="highlighted" image="compose_toolbar_picture_highlighted"/>
+                            <connections>
+                                <action selector="toolBarClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="4ai-nz-WYn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F35-82-zhe" userLabel="toolbar">
+                            <rect key="frame" x="150" y="0.0" width="75" height="44"/>
+                            <state key="normal" image="compose_mentionbutton_background"/>
+                            <state key="highlighted" image="compose_mentionbutton_background_highlighted"/>
+                            <connections>
+                                <action selector="toolBarClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="XOa-xO-CgL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHm-Og-yKJ" userLabel="mention">
+                            <rect key="frame" x="225" y="0.0" width="75" height="44"/>
+                            <state key="normal" image="compose_trendbutton_background"/>
+                            <state key="highlighted" image="compose_trendbutton_background_highlighted"/>
+                            <connections>
+                                <action selector="toolBarClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="zMu-kB-G6F"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY9-2F-yUj" userLabel="emotion">
+                            <rect key="frame" x="300" y="0.0" width="75" height="44"/>
+                            <state key="normal" image="compose_emoticonbutton_background"/>
+                            <state key="highlighted" image="compose_emoticonbutton_background_highlighted"/>
+                            <connections>
+                                <action selector="toolBarClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Hhc-Ub-bFD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="F35-82-zhe" firstAttribute="width" secondItem="5Tw-oL-lfk" secondAttribute="width" id="1AB-9y-6NC"/>
+                        <constraint firstItem="F35-82-zhe" firstAttribute="height" secondItem="5Tw-oL-lfk" secondAttribute="height" id="6gZ-7a-wKU"/>
+                        <constraint firstItem="pHm-Og-yKJ" firstAttribute="height" secondItem="5Tw-oL-lfk" secondAttribute="height" id="8ga-Xb-ycP"/>
+                        <constraint firstItem="pHm-Og-yKJ" firstAttribute="width" secondItem="5Tw-oL-lfk" secondAttribute="width" id="HLL-on-cVv"/>
+                        <constraint firstItem="bY9-2F-yUj" firstAttribute="width" secondItem="5Tw-oL-lfk" secondAttribute="width" id="KBw-av-X88"/>
+                        <constraint firstItem="Amd-fV-UXc" firstAttribute="width" secondItem="5Tw-oL-lfk" secondAttribute="width" id="L6V-qX-Idx"/>
+                        <constraint firstItem="b2c-ka-PZi" firstAttribute="top" secondItem="cpr-xL-qqW" secondAttribute="top" id="NZF-IT-Wld"/>
+                        <constraint firstAttribute="bottom" secondItem="bY9-2F-yUj" secondAttribute="bottom" id="NhH-F9-J8b"/>
+                        <constraint firstItem="bY9-2F-yUj" firstAttribute="top" secondItem="cpr-xL-qqW" secondAttribute="top" id="PLJ-Ew-lNl"/>
+                        <constraint firstAttribute="bottom" secondItem="5Tw-oL-lfk" secondAttribute="bottom" id="POn-Lh-Thn"/>
+                        <constraint firstAttribute="height" constant="44" id="YAA-qn-L7M"/>
+                        <constraint firstAttribute="trailing" secondItem="b2c-ka-PZi" secondAttribute="trailing" id="YP9-Ka-MGw"/>
+                        <constraint firstItem="F35-82-zhe" firstAttribute="top" secondItem="cpr-xL-qqW" secondAttribute="top" id="Yj7-ui-bFA"/>
+                        <constraint firstAttribute="trailing" secondItem="bY9-2F-yUj" secondAttribute="trailing" id="Yw5-9p-TW2"/>
+                        <constraint firstAttribute="bottom" secondItem="pHm-Og-yKJ" secondAttribute="bottom" id="bqh-vO-1ht"/>
+                        <constraint firstAttribute="bottom" secondItem="F35-82-zhe" secondAttribute="bottom" id="c9e-KX-73x"/>
+                        <constraint firstItem="Amd-fV-UXc" firstAttribute="leading" secondItem="5Tw-oL-lfk" secondAttribute="trailing" id="e4L-mN-6z2"/>
+                        <constraint firstAttribute="bottom" secondItem="Amd-fV-UXc" secondAttribute="bottom" id="eQM-bd-9bg"/>
+                        <constraint firstItem="b2c-ka-PZi" firstAttribute="leading" secondItem="cpr-xL-qqW" secondAttribute="leading" id="gNc-ea-JHF"/>
+                        <constraint firstItem="Amd-fV-UXc" firstAttribute="height" secondItem="5Tw-oL-lfk" secondAttribute="height" id="gat-Zb-FWv"/>
+                        <constraint firstItem="Amd-fV-UXc" firstAttribute="top" secondItem="cpr-xL-qqW" secondAttribute="top" id="ism-B1-VSM"/>
+                        <constraint firstItem="bY9-2F-yUj" firstAttribute="leading" secondItem="pHm-Og-yKJ" secondAttribute="trailing" id="lWD-7p-aJ1"/>
+                        <constraint firstItem="5Tw-oL-lfk" firstAttribute="top" secondItem="cpr-xL-qqW" secondAttribute="top" id="loF-Mw-PUp"/>
+                        <constraint firstItem="F35-82-zhe" firstAttribute="leading" secondItem="Amd-fV-UXc" secondAttribute="trailing" id="mG8-RP-pBZ"/>
+                        <constraint firstItem="pHm-Og-yKJ" firstAttribute="top" secondItem="cpr-xL-qqW" secondAttribute="top" id="nxp-Pc-x18"/>
+                        <constraint firstItem="pHm-Og-yKJ" firstAttribute="leading" secondItem="F35-82-zhe" secondAttribute="trailing" id="tv5-tw-OQb"/>
+                        <constraint firstAttribute="bottom" secondItem="b2c-ka-PZi" secondAttribute="bottom" id="v5z-ga-v7F"/>
+                        <constraint firstItem="5Tw-oL-lfk" firstAttribute="leading" secondItem="cpr-xL-qqW" secondAttribute="leading" id="wrt-29-7pi"/>
+                        <constraint firstItem="bY9-2F-yUj" firstAttribute="height" secondItem="5Tw-oL-lfk" secondAttribute="height" id="yVu-Er-5Rs"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBh-kz-QkN">
+                    <rect key="frame" x="5" y="0.0" width="365" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="HoD-Vt-8m1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cpr-xL-qqW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1hL-Ky-g9J"/>
+                <constraint firstAttribute="trailing" secondItem="CBh-kz-QkN" secondAttribute="trailing" constant="5" id="Gcg-w3-uXO"/>
+                <constraint firstAttribute="trailing" secondItem="cpr-xL-qqW" secondAttribute="trailing" id="pjH-lR-aw7"/>
+                <constraint firstAttribute="bottom" secondItem="cpr-xL-qqW" secondAttribute="bottom" id="zS8-D9-jIg"/>
+                <constraint firstItem="CBh-kz-QkN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="zsz-Jp-JJ4"/>
+                <constraint firstItem="CBh-kz-QkN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zxX-tM-5Oi"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomView" destination="cpr-xL-qqW" id="cav-Kd-Ahw"/>
+                <outlet property="emotionButton" destination="bY9-2F-yUj" id="5FC-je-sKG"/>
+                <outlet property="topView" destination="CBh-kz-QkN" id="CLs-aQ-v9R"/>
+                <outlet property="topViewHeight" destination="HoD-Vt-8m1" id="1sv-4u-VPX"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="53"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="compose_camerabutton_background" width="24" height="24"/>
+        <image name="compose_camerabutton_background_highlighted" width="24" height="24"/>
+        <image name="compose_emoticonbutton_background" width="24" height="24"/>
+        <image name="compose_emoticonbutton_background_highlighted" width="24" height="24"/>
+        <image name="compose_mentionbutton_background" width="24" height="24"/>
+        <image name="compose_mentionbutton_background_highlighted" width="24" height="24"/>
+        <image name="compose_toolbar_background" width="1" height="44"/>
+        <image name="compose_toolbar_picture" width="24" height="24"/>
+        <image name="compose_toolbar_picture_highlighted" width="24" height="24"/>
+        <image name="compose_trendbutton_background" width="24" height="24"/>
+        <image name="compose_trendbutton_background_highlighted" width="24" height="24"/>
+    </resources>
+</document>

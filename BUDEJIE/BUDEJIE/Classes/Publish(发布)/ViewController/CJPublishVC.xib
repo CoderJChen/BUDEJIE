@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CJPublishVC">
+            <connections>
+                <outlet property="shareIcon" destination="fzO-XQ-PON" id="93a-KL-rJp"/>
+                <outlet property="view" destination="iN0-l3-epB" id="0Fr-fi-s3z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareBottomBackground" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-XQ-PON">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUg-Ph-GmW">
+                    <rect key="frame" x="43" y="587" width="290" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="290" id="Hur-4V-dRN"/>
+                        <constraint firstAttribute="height" constant="40" id="neY-HP-2P9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" backgroundImage="shareButtonCancel">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancel:" destination="-1" eventType="touchUpInside" id="CJs-xj-6wo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EUg-Ph-GmW" secondAttribute="bottom" constant="40" id="UGB-qt-QmU"/>
+                <constraint firstItem="fzO-XQ-PON" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UOW-7R-oqZ"/>
+                <constraint firstAttribute="trailing" secondItem="fzO-XQ-PON" secondAttribute="trailing" id="Zmk-IL-mwM"/>
+                <constraint firstItem="EUg-Ph-GmW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dpZ-MN-QbH"/>
+                <constraint firstAttribute="bottom" secondItem="fzO-XQ-PON" secondAttribute="bottom" id="ebv-xu-4fY"/>
+                <constraint firstItem="fzO-XQ-PON" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="p1p-hV-TFy"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="shareBottomBackground" width="320" height="343"/>
+        <image name="shareButtonCancel" width="289" height="40"/>
+    </resources>
+</document>
