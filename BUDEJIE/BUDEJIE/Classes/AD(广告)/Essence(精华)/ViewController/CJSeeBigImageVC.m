@@ -37,7 +37,9 @@
     
     UIScrollView * scrollView = [[UIScrollView alloc]init];
     scrollView.frame = [UIScreen mainScreen].bounds;
+    
     [scrollView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(closeClick:)]];
+    
     [self.view insertSubview:scrollView atIndex:0];
     self.scrollView = scrollView;
     
@@ -139,7 +141,7 @@
 //    获得相片
     PHFetchResult <PHAsset *> * createdAssets = self.createdAssets;
     if (!createdAssets) {
-        [SVProgressHUD showErrorWithStatus:@"保存图片失败"];
+        [SVProgressHUD showErrorWithStatus:@"获取图片失败"];
         return;
     }
 //    获得相册
