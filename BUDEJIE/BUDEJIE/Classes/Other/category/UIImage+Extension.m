@@ -14,6 +14,7 @@
     UIImage * image = [UIImage imageNamed:imageName];
    return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
+
 - (instancetype)CJ_circleImage{
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0);
     UIBezierPath * bezier = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, self.size.width, self.size.height)];

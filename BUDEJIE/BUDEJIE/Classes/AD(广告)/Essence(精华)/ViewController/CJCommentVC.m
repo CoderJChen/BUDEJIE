@@ -19,6 +19,7 @@
 
 static NSString * const CJCommentCellId = @"comment";
 static NSString * const CJHeaderId = @"header";
+
 @interface CJCommentVC ()<UITableViewDelegate,UITableViewDataSource>
 /** 请求管理者 */
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
@@ -181,6 +182,7 @@ static NSString * const CJHeaderId = @"header";
 - (void)keyboardWillChangeFrame:(NSNotification *)notification{
 //    工具条平移的距离 == 屏幕高度 - 键盘最终的Y值
     self.bottomSpace.constant = CJScreenH - [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
+    
     CGFloat duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     [UIView animateWithDuration:duration animations:^{
         [self.view layoutIfNeeded];

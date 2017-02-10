@@ -41,8 +41,11 @@ static NSString *const CJTopicCellId = @"CJTopicCellId";
     [super viewDidLoad];
     
     self.tableView.backgroundColor = CJRandomColor;
+//    自动调整scrollView的高度
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
     self.tableView.contentInset = UIEdgeInsetsMake(CJNavMaxY + CJTitlesViewH, 0, CJTabBarH, 0);
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 //    注册cell
@@ -138,6 +141,7 @@ static NSString *const CJTopicCellId = @"CJTopicCellId";
     params[@"c"] = @"data";
     params[@"type"] = @(self.type); // 这里发送@1也是可行的
     params[@"maxtime"] = self.maxTime;
+    
 //    发送请求
     [_manager GET:CJCommonURL parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        存储maxtime

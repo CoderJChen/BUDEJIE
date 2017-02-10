@@ -22,6 +22,7 @@
 @property(weak, nonatomic) CJTitleButton * currentTitleButton;
 /** 标题下划线 */
 @property(nonatomic, weak) UIView *titleUnderline;
+
 @end
 
 @implementation CJEssenceVC
@@ -41,6 +42,7 @@
     [self addChildViewIntoScrollView:0];
     // Do any additional setup after loading the view.
 }
+
 #pragma mark - 设置导航条
 - (void)setupNavBar
 {

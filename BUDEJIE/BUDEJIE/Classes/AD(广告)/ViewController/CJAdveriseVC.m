@@ -100,6 +100,7 @@
 - (IBAction)jumpClick:(id)sender {
 //    销毁广告界面，进入主框架界面
     CJTabBarVC * tabBarVC = [[CJTabBarVC alloc]init];
+    
     [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVC;
 //    干掉定时器
     [_timer invalidate];

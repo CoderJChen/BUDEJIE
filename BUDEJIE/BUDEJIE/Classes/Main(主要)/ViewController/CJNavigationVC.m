@@ -49,6 +49,7 @@
     // Do any additional setup after loading the view.
 }
 #pragma mark -  UIGestureRecognizerDelegate
+
 // 决定是否触发手势
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
     return self.childViewControllers.count > 1;
